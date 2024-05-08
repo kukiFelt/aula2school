@@ -1,3 +1,4 @@
+import Aside from "./components/Aside";
 import NavBar from "./components/NavBar";
 
 export default function RootLayout({
@@ -10,7 +11,10 @@ export default function RootLayout({
         <body className="">
             <div>
                 <NavBar/>
-                {children}
+                <div className="flex">
+                    <Aside/>
+                    {children}
+                </div>
             </div>
         </body>
       </html>
