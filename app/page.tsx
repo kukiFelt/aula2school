@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export default function home() {
   return(
-    <div>
+    <div className="bg-black text-white text-center">
     <Header/>
     <Banner/>
     <Courses/>
