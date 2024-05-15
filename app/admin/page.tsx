@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { MenuSheet } from "./components/MenuSheet";
 
-export default function admin(){
-    return(
+export default function admin() {
+    return (
         <div>
             <h1 className="text-center bg-red-500 font-bold">Bem vindo a Área Administrativa</h1>
             <Button>Salvar</Button>
             <Button variant="destructive">Excluir</Button>
             <Button variant={"secondary"}> Novo</Button>
-
+            <MenuSheet />
         </div>
-     )
+    )
 }

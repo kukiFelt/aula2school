@@ -1,23 +1,30 @@
 import Aside from "./components/Aside";
 import NavBar from "./components/NavBar";
+import { ThemeProvider } from "@/app/admin/Theme"
 
 export default function RootLayout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
-    return (
-      <html lang="en">
-        <body className="">
-            <div>
-                <NavBar/>
-                <div className="flex">
-                    <Aside/>
-                    {children}
-                </div>
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className="">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div>
+            <NavBar />
+            <div className="flex">
+              <Aside />
+              {children}
             </div>
-        </body>
-      </html>
-    );
-  }
-  
+          </div>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
