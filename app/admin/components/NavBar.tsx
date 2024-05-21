@@ -3,10 +3,12 @@ import { ModeToggle } from "./ModeToggle";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { CableIcon, DoorClosed, UserCheck2Icon } from "lucide-react";
 import { MenuNav } from "./MenuNav";
+import { MenuSheet } from "./MenuSheet";
 export default function NavBar() {
     return (
         <div className="flex justify-between p-6 border-b-2">
-            <img src="/img/FB.png" className="size-[10% lg:size-[20%]" />
+            <img src="/img/FB.png" className="hidden md:block size-[10% lg:size-[20%]" />
+            <MenuSheet/>
             <MenuNav/>
         
             <div className="flex space-x-4">
